@@ -32,7 +32,6 @@ function App() {
       }}>
         <a onClick={(e) => { e.preventDefault(); setPage('1') }}>Марпшагаыпага</a>
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
-        <a onClick={(e) => { e.preventDefault(); setPage('3') }}>DevianArt</a>
       </div>
     </>
   )
