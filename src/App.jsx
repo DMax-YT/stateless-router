@@ -20,7 +20,7 @@ function App() {
       return <Page3 />
     }
 
-    return <h1 color='aquamarine'>Двиантное поведение страницы</h1>
+    return <h1 color='aquamarine'>Девиантное поведение страницы</h1>
   }
   return (
     <>
