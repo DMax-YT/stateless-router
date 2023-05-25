@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import { toast } from 'react-hot-toast'
 
 import {
   Page1,
   Page2,
   Page3
 } from './pages'
+
+import { Notifications } from './components/Notifications'
 
 function App() {
   const [page, setPage] = useState('-1')
@@ -26,6 +29,7 @@ function App() {
   }
   return (
     <>
+      <Notifications />
       {renderPage()}
 
       <div style={{
@@ -40,6 +44,8 @@ function App() {
         <a onClick={(e) => { e.preventDefault(); setPage('1') }}>Марпшагаыпага</a>
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
+
+        <a onClick={(e) => { e.preventDefault(); toast('П-п-поверхностное рассеивание') }}>Рессеять</a>
       </div>
     </>
   )
