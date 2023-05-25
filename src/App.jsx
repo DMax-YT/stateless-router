@@ -6,6 +6,8 @@ import {
   Page3
 } from './pages'
 
+import { Notifications } from './components/Notifications'
+
 function App() {
   const [page, setPage] = useState('-1')
 
@@ -26,6 +28,7 @@ function App() {
   }
   return (
     <>
+      <Notifications />
       {renderPage()}
 
       <div style={{
