@@ -17,6 +17,7 @@ export const Notifications = () => {
         </ToastBar>
       )}
     </Toaster>,
+
     document.body
   )
 }
