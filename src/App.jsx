@@ -1,8 +1,10 @@
 import { useState } from 'react'
 
-import { Page1 } from './Page1'
-import { Page2 } from './Page2'
-import { Page3 } from './Page3'
+import {
+  Page1,
+  Page2,
+  Page3
+} from './pages'
 
 function App() {
   const [page, setPage] = useState('-1')
