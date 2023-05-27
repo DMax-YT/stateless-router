@@ -8,6 +8,26 @@ import {
 } from './pages'
 
 import { Notifications } from './components/Notifications'
+import { getPhrase } from './services/WisePhrase.service'
+
+const WiseButton = () => {
+  const [phrase, setPhrase] = useState(getPhrase)
+
+  const showThoughts = (e) => {
+    e.preventDefault()
+    toast(phrase?.alert ?? 'Кризис идей')
+
+    if (phrase) {
+      setPhrase(getPhrase())
+    }
+  }
+
+  return (
+    <a onClick={showThoughts}>
+      {phrase?.button ?? 'Пока без умных мыслей'}
+    </a>
+  )
+}
 
 function App() {
   const [page, setPage] = useState('-1')
@@ -45,7 +65,7 @@ function App() {
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
 
-        <a onClick={(e) => { e.preventDefault(); toast('П-п-поверхностное рассеивание') }}>Рессеять</a>
+        <WiseButton />
       </div>
     </>
   )
