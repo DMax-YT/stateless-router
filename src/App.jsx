@@ -36,6 +36,8 @@ function App() {
         display: 'flex',
         gap: '10px',
         flexDirection: 'row',
+        alignItems: 'center',
+
         position: 'absolute',
         top: 20,
         left: '50%',
