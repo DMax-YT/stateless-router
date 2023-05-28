@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
 
+import './Page3.css'
+
 const Modal = ({ onClose }) => {
   return (
-    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+    <div className='modal'>
       <button onClick={onClose}>
         Бесполезная кнопка, закрывающая сие чудо инженерной мысли,
         поакзывающее все проблемы создания порталов и их использования в React приложениях
@@ -26,13 +28,7 @@ export const Page3 = () => {
 
   return (
     <>
-      <div style={{
-        background: 'linear-gradient(77.81deg, rgb(247 26 26 / 80%) 0%, rgb(80 53 255 / 80%) 100%)',
-        '-webkit-text-fill-color': 'transparent',
-        '-webkit-background-clip': 'text',
-        fontSize: '5em',
-        fontWeight: '800'
-      }} onClick={toggleModal}>
+      <div className='toggler' onClick={toggleModal}>
         Тогуглер
       </div>
 
