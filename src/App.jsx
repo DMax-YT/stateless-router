@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { toast } from 'react-hot-toast'
 
 import {
   Page1,
@@ -8,25 +7,7 @@ import {
 } from './pages'
 
 import { Notifications } from './components/Notifications'
-import { getPhrase } from './services/WisePhrase.service'
-
-const WiseButton = () => {
-  const [phrase, setPhrase] = useState(getPhrase)
-
-  const showThoughts = (e) => {
-    toast(phrase?.alert ?? 'Кризис идей')
-
-    if (phrase) {
-      setPhrase(getPhrase())
-    }
-  }
-
-  return (
-    <button className='wise-button' onClick={showThoughts}>
-      {phrase?.button ?? 'Пока без умных мыслей'}
-    </button>
-  )
-}
+import { WiseButton } from './components/WiseButton'
 
 function App() {
   const [page, setPage] = useState('-1')
