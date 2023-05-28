@@ -1,7 +1,7 @@
 import './Page2.css'
 
 export const Page2 = () => {
-  return <div className='large-question'>
+  return <h1 className='large-question'>
     А ты купил адорефи?
-  </div>
+  </h1>
 }
