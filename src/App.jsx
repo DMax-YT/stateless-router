@@ -33,7 +33,7 @@ function App() {
       <Notifications />
       <CurrentPage />
 
-      <div style={{
+      <nav style={{
         display: 'flex',
         gap: '10px',
         flexDirection: 'row',
@@ -49,7 +49,7 @@ function App() {
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
 
         <WiseButton />
-      </div>
+      </nav>
     </>
   )
 }
