@@ -6,9 +6,11 @@ import {
   Page3
 } from './pages'
 
-import { Notifications } from './components/Notifications'
-import { WiseButton } from './components/WiseButton'
-import { Navbar } from './components/Navbar'
+import {
+  Navbar,
+  Notifications,
+  WiseButton
+} from './components'
 
 function App() {
   const [page, setPage] = useState('-1')
