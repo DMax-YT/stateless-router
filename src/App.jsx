@@ -14,7 +14,6 @@ const WiseButton = () => {
   const [phrase, setPhrase] = useState(getPhrase)
 
   const showThoughts = (e) => {
-    e.preventDefault()
     toast(phrase?.alert ?? 'Кризис идей')
 
     if (phrase) {
@@ -23,9 +22,9 @@ const WiseButton = () => {
   }
 
   return (
-    <a onClick={showThoughts}>
+    <button className='wise-button' onClick={showThoughts}>
       {phrase?.button ?? 'Пока без умных мыслей'}
-    </a>
+    </button>
   )
 }
 
