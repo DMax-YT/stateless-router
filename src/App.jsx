@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { toast } from 'react-hot-toast'
 
 import {
   Page1,
@@ -8,6 +7,7 @@ import {
 } from './pages'
 
 import { Notifications } from './components/Notifications'
+import { WiseButton } from './components/WiseButton'
 
 function App() {
   const [page, setPage] = useState('-1')
@@ -36,6 +36,8 @@ function App() {
         display: 'flex',
         gap: '10px',
         flexDirection: 'row',
+        alignItems: 'center',
+
         position: 'absolute',
         top: 20,
         left: '50%',
@@ -45,7 +47,7 @@ function App() {
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
 
-        <a onClick={(e) => { e.preventDefault(); toast('П-п-поверхностное рассеивание') }}>Рессеять</a>
+        <WiseButton />
       </div>
     </>
   )

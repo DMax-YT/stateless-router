@@ -1,0 +1,38 @@
+.wise-button {
+  background: repeating-linear-gradient(135deg,
+      rgb(159, 173, 0) 0%,
+      rgb(15, 135, 152) 40%,
+      rgb(159, 173, 0) 50%,
+      rgb(15, 135, 152) 100%);
+  background-size: 400% 400%;
+
+  color: #242424;
+  font-weight: 700;
+  border: 0;
+
+  animation: MoveBackground 2s linear infinite;
+}
+
+.wise-button:focus {
+  outline: 0;
+}
+
+@media (prefers-color-scheme: light) {
+  .wise-button {
+    color: #ffffff;
+  }
+}
+
+@keyframes MoveBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  49% {
+    background-position: 30% 30%;
+  }
+
+  100% {
+    background-position: 70% 70%;
+  }
+}
