@@ -3,9 +3,9 @@ import { createPortal } from 'react-dom'
 
 const Modal = ({ onClose }) => {
   return (
-    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translateX(-50%) translateY(-50%)' }}>
+    <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
       <button onClick={onClose}>
-        Бесполезная кнопка, закрывающая сие чудо инженерной мысли, 
+        Бесполезная кнопка, закрывающая сие чудо инженерной мысли,
         поакзывающее все проблемы создания порталов и их использования в React приложениях
         на наглядном примере, который безо всяких ошибок демонстрирует правильное применение данной техники
       </button>
