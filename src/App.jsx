@@ -4,13 +4,13 @@ import {
   Page1,
   Page2,
   Page3
-} from './pages'
+} from 'pages'
 
 import {
   Navbar,
   Notifications,
   WiseButton
-} from './components'
+} from 'components'
 
 function App() {
   const [page, setPage] = useState('-1')

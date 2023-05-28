@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { toast } from 'react-hot-toast'
 
-import { getPhrase } from '../../services/WisePhrase.service'
+import { getPhrase } from 'services/WisePhrase.service'
 import './WiseButton.css'
 
 export const WiseButton = () => {
