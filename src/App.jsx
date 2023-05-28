@@ -31,9 +31,6 @@ function App() {
 
   return (
     <>
-      <Notifications />
-      <CurrentPage />
-
       <Navbar>
         <a onClick={(e) => { e.preventDefault(); setPage('1') }}>Марпшагаыпага</a>
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
@@ -41,6 +38,9 @@ function App() {
 
         <WiseButton />
       </Navbar>
+
+      <Notifications />
+      <CurrentPage />
     </>
   )
 }
