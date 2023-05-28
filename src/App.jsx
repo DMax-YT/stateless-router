@@ -8,6 +8,7 @@ import {
 
 import { Notifications } from './components/Notifications'
 import { WiseButton } from './components/WiseButton'
+import { Navbar } from './components/Navbar'
 
 function App() {
   const [page, setPage] = useState('-1')
@@ -33,23 +34,13 @@ function App() {
       <Notifications />
       <CurrentPage />
 
-      <nav style={{
-        display: 'flex',
-        gap: '10px',
-        flexDirection: 'row',
-        alignItems: 'center',
-
-        position: 'absolute',
-        top: 20,
-        left: '50%',
-        transform: 'translateX(-50%)'
-      }}>
+      <Navbar>
         <a onClick={(e) => { e.preventDefault(); setPage('1') }}>Марпшагаыпага</a>
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
 
         <WiseButton />
-      </nav>
+      </Navbar>
     </>
   )
 }
