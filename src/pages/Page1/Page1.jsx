@@ -1,5 +1,7 @@
+import './Page1.css'
+
 export const Page1 = () => {
-  return <div style={{color: 'red', fontSize: '15em', overflow: 'hidden', maxWidth: '100vw'}}>
+  return <div className='scream'>
     ААААААААААААААААААААААААААААААААААААА
   </div>
 }

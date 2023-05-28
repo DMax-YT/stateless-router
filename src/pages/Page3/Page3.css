@@ -1,0 +1,9 @@
+.toggler {
+  max-width: fit-content;
+  background: linear-gradient(77.81deg, rgb(247 26 26 / 80%) 0%, rgb(80 53 255 / 80%) 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+
+  font-size: 5em;
+  font-weight: 800;
+}

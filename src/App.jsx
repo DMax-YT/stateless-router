@@ -4,15 +4,18 @@ import {
   Page1,
   Page2,
   Page3
-} from './pages'
+} from 'pages'
 
-import { Notifications } from './components/Notifications'
-import { WiseButton } from './components/WiseButton'
+import {
+  Navbar,
+  Notifications,
+  WiseButton
+} from 'components'
 
 function App() {
   const [page, setPage] = useState('-1')
 
-  const renderPage = () => {
+  const CurrentPage = () => {
     if (page === '1') {
       return <Page1 />
     }
@@ -27,28 +30,19 @@ function App() {
 
     return <h1 color='aquamarine'>Девиантное поведение страницы</h1>
   }
+
   return (
     <>
-      <Notifications />
-      {renderPage()}
-
-      <div style={{
-        display: 'flex',
-        gap: '10px',
-        flexDirection: 'row',
-        alignItems: 'center',
-
-        position: 'absolute',
-        top: 20,
-        left: '50%',
-        transform: 'translateX(-50%)'
-      }}>
+      <Navbar>
         <a onClick={(e) => { e.preventDefault(); setPage('1') }}>Марпшагаыпага</a>
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
 
         <WiseButton />
-      </div>
+      </Navbar>
+
+      <Notifications />
+      <CurrentPage />
     </>
   )
 }
