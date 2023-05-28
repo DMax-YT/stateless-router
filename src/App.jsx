@@ -12,7 +12,7 @@ import { WiseButton } from './components/WiseButton'
 function App() {
   const [page, setPage] = useState('-1')
 
-  const renderPage = () => {
+  const CurrentPage = () => {
     if (page === '1') {
       return <Page1 />
     }
@@ -27,10 +27,11 @@ function App() {
 
     return <h1 color='aquamarine'>Девиантное поведение страницы</h1>
   }
+
   return (
     <>
       <Notifications />
-      {renderPage()}
+      <CurrentPage />
 
       <div style={{
         display: 'flex',
