@@ -1,5 +1,7 @@
+import './Page2.css'
+
 export const Page2 = () => {
-  return <div style={{color: 'green', fontSize: '10em'}}>
+  return <div className='large-question'>
     А ты купил адорефи?
   </div>
 }
