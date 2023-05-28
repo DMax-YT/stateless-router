@@ -1,0 +1,7 @@
+.scream {
+  max-width: 100vw;
+  overflow: hidden;
+
+  color: red;
+  font-size: 15em;
+}
