@@ -1,6 +1,12 @@
 .toast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   color: #fdfdfd;
   background: #11cc11;
+  border-radius: 8px;
+  padding: 8px 16px;
 
   outline: 3px rgb(43, 105, 30) solid;
   transition: outline 0.2s;
@@ -9,4 +15,36 @@
 .toast:hover {
   cursor: pointer;
   outline: 3px rgb(184, 53, 53) solid;
+}
+
+.toast-in {
+  animation: ToastShow 200ms ease forwards;
+}
+
+.toast-out {
+  animation: ToastHide 300ms ease forwards;
+}
+
+@keyframes ToastShow {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ToastHide {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
 }
