@@ -7,7 +7,7 @@ import './WiseButton.css'
 export const WiseButton = () => {
   const [phrase, setPhrase] = useState(getPhrase)
 
-  const showThoughts = (e) => {
+  const showThoughts = () => {
     toast(phrase?.alert ?? 'Кризис идей')
 
     if (phrase) {
