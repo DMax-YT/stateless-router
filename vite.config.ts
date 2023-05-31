@@ -11,5 +11,7 @@ export default defineConfig({
       components: '/src/components',
       pages: '/src/pages'
     }
-  }
+  },
+
+  base: process.env.BASE_URL?.startsWith('/') ? process.env.BASE_URL : '/'
 })
