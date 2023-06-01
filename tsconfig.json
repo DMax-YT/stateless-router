@@ -20,6 +20,8 @@
     "baseUrl": "./src",
     "paths": {
       "services/*": ["services/*"],
+      "context/*": ["context/*"],
+      "hooks/*": ["hooks/*"],
       "components/*": ["components/*"],
       "pages/*": ["pages/*"]
     }
