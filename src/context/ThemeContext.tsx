@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from 'react'
+import { ReactNode, createContext, useContext, useState } from 'react'
 
 export type Theme = 'dark' | 'light' | 'auto'
 
@@ -38,4 +38,17 @@ export const ThemeProvider = ({ children }: { children?: ReactNode }) => {
       {children}
     </ThemeContext.Provider>
   )
+}
+
+export const useTheme = () => {
+  const themeContext = useContext(ThemeContext)
+
+  if (themeContext === null) {
+    throw new Error('Can not `useTheme` outside of the `ThemeProvider`')
+  }
+
+  return {
+    theme: themeContext.theme,
+    setTheme: themeContext.setTheme
+  }
 }
