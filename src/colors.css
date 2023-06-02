@@ -1,0 +1,24 @@
+:root {
+  --text: rgba(255, 255, 255, 0.87);
+  --background: rgb(36, 36, 36);
+
+  --green: rgb(54, 223, 90);
+  --dark-green: rgb(57, 184, 53);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: rgb(33, 53, 71);
+    --background: rgb(255, 255, 255);
+  }
+}
+
+.dark {
+  --text: rgba(255, 255, 255, 0.87);
+  --background: rgb(36, 36, 36);
+}
+
+.light {
+  --text: rgb(33, 53, 71);
+  --background: rgb(255, 255, 255);
+}
