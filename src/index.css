@@ -7,9 +7,58 @@
 }
 
 body {
+  color: var(--text);
   background: var(--background);
+
+  transition: color, background 100ms ease-out;
 }
 
 #root {
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.2em;
+  font-weight: 700;
+}
+
+a {
+  color: var(--blue);
+  font-weight: 500;
+
+  transition: color 100ms;
+}
+
+a:hover {
+  color: var(--dark-blue);
+
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  outline: 2px solid transparent;
+
+  color: var(--text);
+  background-color: var(--background-secondary);
+  font-size: 1em;
+  padding: 0.6em 1.2em;
+  border-radius: 8px;
+
+  cursor: pointer;
+  transition: outline-color 250ms;
+}
+
+button:hover {
+  outline-color: var(--blue);
+}
+
+button:focus,
+button:focus-visible {
+  outline-color: var(--dark-blue);
 }
