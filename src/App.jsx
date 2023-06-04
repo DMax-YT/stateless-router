@@ -16,7 +16,7 @@ import { useTheme } from 'context'
 
 function App() {
   const [page, setPage] = useState('-1')
-  const { theme } = useTheme()
+  const { theme, setTheme } = useTheme()
 
   useLayoutEffect(() => {
     if (theme === 'auto') {
@@ -33,6 +33,10 @@ function App() {
       document.body.classList.add('light')
     }
   }, [theme])
+
+  const changeTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark')
+  }
 
   const CurrentPage = () => {
     if (page === '1') {
@@ -56,6 +60,7 @@ function App() {
         <a onClick={(e) => { e.preventDefault(); setPage('1') }}>Марпшагаыпага</a>
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
+        <a onClick={(e) => { e.preventDefault(); changeTheme() }}>{theme === 'dark' ? 'Светлая' : 'Тёмная'}</a>
 
         <WiseButton />
       </Navbar>
