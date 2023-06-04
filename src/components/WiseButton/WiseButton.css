@@ -8,12 +8,13 @@
 
   color: var(--background);
   font-weight: 700;
-  border: 0;
 
   animation: MoveBackground 2s linear infinite;
 }
 
-.wise-button:focus {
+.wise-button:hover,
+.wise-button:focus,
+.wise-button:focus-visible {
   outline: 0;
 }
 
