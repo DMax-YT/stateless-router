@@ -6,7 +6,7 @@
       rgb(15, 135, 152) 100%);
   background-size: 400% 400%;
 
-  color: #242424;
+  color: var(--background);
   font-weight: 700;
   border: 0;
 
@@ -15,12 +15,6 @@
 
 .wise-button:focus {
   outline: 0;
-}
-
-@media (prefers-color-scheme: light) {
-  .wise-button {
-    color: #ffffff;
-  }
 }
 
 @keyframes MoveBackground {
