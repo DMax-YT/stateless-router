@@ -14,15 +14,18 @@
   :root {
     --text: rgb(33, 53, 71);
     --background: rgb(255, 255, 255);
+    --background-secondary: rgb(221, 221, 221);
   }
 }
 
 .dark {
   --text: rgba(255, 255, 255, 0.87);
   --background: rgb(36, 36, 36);
+  --background-secondary: rgb(50, 50, 50);
 }
 
 .light {
   --text: rgb(36, 36, 36);
   --background: rgb(248, 248, 248);
+  --background-secondary: rgb(221, 221, 221);
 }
