@@ -8,6 +8,9 @@
 
   --blue: rgb(0, 132, 255);
   --dark-blue: rgb(0, 112, 218);
+
+  --red: rgb(255, 70, 70);
+  --dark-red: rgb(255, 0, 0);
 }
 
 @media (prefers-color-scheme: light) {
