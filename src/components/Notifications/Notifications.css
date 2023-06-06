@@ -3,20 +3,21 @@
   align-items: center;
   justify-content: center;
 
-  color: #fdfdfd;
-  background: #11cc11;
+  color: var(--text);
+  background: var(--green);
   border-radius: 8px;
   padding: 8px 16px;
 
-  outline: 3px rgb(43, 105, 30) solid;
+  outline: 2px transparent solid;
   transition: outline 0.2s;
 
   user-select: none;
 }
 
 .toast:hover {
+  outline-color: var(--red);
+
   cursor: pointer;
-  outline: 3px rgb(184, 53, 53) solid;
 }
 
 .toast-in {

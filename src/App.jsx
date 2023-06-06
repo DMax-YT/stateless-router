@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useLayoutEffect, useState } from 'react'
 
 import {
   Page1,
@@ -9,11 +9,31 @@ import {
 import {
   Navbar,
   Notifications,
+  ThemeSwitcher,
   WiseButton
 } from 'components'
 
+import { useTheme } from 'context'
+
 function App() {
   const [page, setPage] = useState('-1')
+  const { theme } = useTheme()
+
+  useLayoutEffect(() => {
+    if (theme === 'auto') {
+      document.body.classList.remove('dark', 'light')
+    }
+
+    if (theme === 'dark') {
+      document.body.classList.remove('light')
+      document.body.classList.add('dark')
+    }
+
+    if (theme === 'light') {
+      document.body.classList.remove('dark')
+      document.body.classList.add('light')
+    }
+  }, [theme])
 
   const CurrentPage = () => {
     if (page === '1') {
@@ -39,6 +59,7 @@ function App() {
         <a onClick={(e) => { e.preventDefault(); setPage('3') }}>Portal 3</a>
 
         <WiseButton />
+        <ThemeSwitcher />
       </Navbar>
 
       <Notifications />

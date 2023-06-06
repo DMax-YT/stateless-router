@@ -1,0 +1,26 @@
+.theme-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text);
+  background: none;
+  outline: 2px var(--text) solid;
+
+  padding: 0.5em;
+  border-radius: 50%;
+
+  cursor: pointer;
+  user-select: none;
+  transition: background 250ms;
+}
+
+.theme-switcher:hover {
+  outline-color: var(--text);
+}
+
+.theme-switcher:focus,
+.theme-switcher:focus-visible {
+  outline-color: var(--text);
+  background-color: var(--background-secondary);
+}
