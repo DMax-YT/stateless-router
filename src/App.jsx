@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from 'react'
+import { useCallback, useLayoutEffect, useState } from 'react'
 
 import {
   Page1,
@@ -35,7 +35,7 @@ function App() {
     }
   }, [theme])
 
-  const CurrentPage = () => {
+  const CurrentPage = useCallback(() => {
     if (page === '1') {
       return <Page1 />
     }
@@ -49,7 +49,7 @@ function App() {
     }
 
     return <h1 color='aquamarine'>Девиантное поведение страницы</h1>
-  }
+  }, [page])
 
   return (
     <>
