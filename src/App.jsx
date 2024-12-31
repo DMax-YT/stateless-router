@@ -10,14 +10,18 @@ import {
   Navbar,
   Notifications,
   ThemeSwitcher,
-  WiseButton
+  WiseButton,
+  Snowfall
 } from 'components'
+
+import { useNewYear } from 'hooks'
 
 import { useTheme } from 'context'
 
 function App() {
   const [page, setPage] = useState('-1')
   const { theme } = useTheme()
+  const isNewYear = useNewYear()
 
   useLayoutEffect(() => {
     if (theme === 'auto') {
@@ -53,6 +57,8 @@ function App() {
 
   return (
     <>
+      {isNewYear && <Snowfall />}
+
       <Navbar>
         <a onClick={(e) => { e.preventDefault(); setPage('1') }}>Марпшагаыпага</a>
         <a onClick={(e) => { e.preventDefault(); setPage('2') }}>Вынгирадро</a>
